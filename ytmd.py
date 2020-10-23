@@ -73,7 +73,7 @@ class ytmd:
 				if not self.lastPlayedTrack['author']: self.lastPlayedTrack['author'] = 'unknown'
 				if not self.lastPlayedTrack['title']: self.lastPlayedTrack['title'] = 'unknown'
 				if not self.lastPlayedTrack['album']: self.lastPlayedTrack['album'] = 'unknown'
-				historyFile.write(f"{self.lastPlayedTrack['timePlayed']} {self.lastPlayedTrack['author']} - {self.lastPlayedTrack['title']} - {self.lastPlayedTrack['album']} \n")
+				historyFile.write(f"[{self.lastPlayedTrack['timePlayed']}] {self.lastPlayedTrack['author']} - {self.lastPlayedTrack['title']} - {self.lastPlayedTrack['album']} \n")
 
 
 	def run(self):
@@ -90,7 +90,6 @@ class ytmd:
 
 
 if __name__ == '__main__':
-	print(f'YouTube Music Desktop App API Fetcher')
 	ytm = ytmd()
 	while True:	
 		ytm.run()
