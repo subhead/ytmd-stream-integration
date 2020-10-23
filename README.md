@@ -14,6 +14,7 @@ This utility fetches the current playing song from the remote API of [YouTube Mu
 
 
 # Requirements
+- Python 3.8, pip (Not needed if running the prebuild windows binary)
 - YouTube Music Desktop App installed
 - Activated remote control API inside of Youtube Music Desktop App 
 
@@ -34,6 +35,11 @@ OR
 - pip install -r requirements.txt
 - Check the configuration file config.txt and make changes if needed
 - python ytmd.py
+
+(optional) Compiling a windows executable
+- Install PyInstaller
+- python -m PyInstaller --clean --onefile --add-data="config.ini;." --icon="ytmd.ico" ytmd.py
+- Your binary is stored under the dist directory
 
 ## Linux / Mac
 - Clone this repo
